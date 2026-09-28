@@ -1,6 +1,6 @@
 'use-client'
 
-import { Form, Input, inputNumber, Modal } from "antd";
+import { Form, Input, InputNumber, Modal } from "antd";
 
 export default function FormModal({ openModal, serie, confirmLoading, onsubmit, onCancel }) {
     const [form] = Form.useForm();
@@ -51,7 +51,7 @@ export default function FormModal({ openModal, serie, confirmLoading, onsubmit, 
                     },
                     ]}
                 >
-                    <Input placeholder=" ex: Drama"></Input>
+                    <Input placeholder=" ex: Netflix"></Input>
                 </Form.Item>
                 <Form.Item
                     name='numero_temporadas'
@@ -64,7 +64,7 @@ export default function FormModal({ openModal, serie, confirmLoading, onsubmit, 
                     },
                     ]}
                 >
-                    <Input placeholder=" ex: 5" min={1} style={{width: '100%'}}></Input>
+                    <InputNumber placeholder=" ex: 5" min={1} style={{width: '100%'}}></InputNumber>
                 </Form.Item>
                 <Form.Item
                     name='ano_lancamento'
@@ -77,7 +77,7 @@ export default function FormModal({ openModal, serie, confirmLoading, onsubmit, 
                     },
                     ]}
                 >
-                    <Input placeholder=" ex: 2008" min={1900} max={2100} style={{width: '100%'}}></Input>
+                    <InputNumber placeholder=" ex: 2008" min={1900} max={2100} style={{width: '100%'}}></InputNumber>
                 </Form.Item>
                 <Form.Item
                     name='imageUrl'

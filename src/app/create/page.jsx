@@ -23,12 +23,14 @@ export default function CreatePage(){
             setLoading(false)
         };
 
-        return(
+        
+    }
+    return(
             <main>
                 <h2>Post - create</h2>
-                <p>Cria uam nova serie</p>
+                <p>Cria uma nova serie</p>
                 <Button type='primary' onClick={()=> setOpenModal(true)}> nova serie</Button>
+                <FormModal openModal={openModal} confirmLoading={loading} onsubmit={handleSubmit} onCancel={()=> setOpenModal(false)}></FormModal>
             </main>
         )
-    }
 }
